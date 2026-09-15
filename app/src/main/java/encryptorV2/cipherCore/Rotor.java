@@ -1,4 +1,4 @@
-package encryptorv2.cipherCore;
+package encryptorV2.cipherCore;
 
 public class Rotor {
 
@@ -9,6 +9,7 @@ public class Rotor {
 
     /**
      * Constructs a Rotor with the specified wiring.
+     * 
      * @param wiring The wiring for the rotor.
      */
     public Rotor(int[] wiring) {
@@ -20,6 +21,7 @@ public class Rotor {
 
     /**
      * Encodes an input signal through the forward wiring of the rotor.
+     * 
      * @param input The input signal.
      * @return The encoded signal.
      */
@@ -31,6 +33,7 @@ public class Rotor {
 
     /**
      * Encodes an input signal through the backward wiring of the rotor.
+     * 
      * @param input The input signal.
      * @return The encoded signal.
      */
@@ -46,6 +49,7 @@ public class Rotor {
 
     /**
      * Inverts the wiring of the rotor.
+     * 
      * @param wiring The original wiring.
      * @return The inverted wiring.
      */
