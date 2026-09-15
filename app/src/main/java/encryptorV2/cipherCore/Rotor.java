@@ -2,7 +2,7 @@ package encryptorV2.cipherCore;
 
 public class Rotor {
 
-    private final int[] foward; // wiring
+    private final int[] forward; // wiring
     private final int[] backward; // inverse wiring
     private int position; // current offset
     private int size; // size of the rotor
@@ -13,7 +13,7 @@ public class Rotor {
      * @param wiring The wiring for the rotor.
      */
     public Rotor(int[] wiring) {
-        this.foward = wiring.clone();
+        this.forward = wiring.clone();
         this.backward = invert(wiring);
         this.position = 0;
         this.size = wiring.length;
@@ -25,10 +25,10 @@ public class Rotor {
      * @param input The input signal.
      * @return The encoded signal.
      */
-    public int encodeFoward(int input) {
+    public int encodeForward(int input) {
         int shifted = (input + position) % size;
-        int whired = foward[shifted];
-        return (whired - position + size) % size;
+        int wired = forward[shifted];
+        return (wired - position + size) % size;
     }
 
     /**
@@ -39,8 +39,8 @@ public class Rotor {
      */
     public int encodeBackward(int input) {
         int shifted = (input + position) % size;
-        int whired = backward[shifted];
-        return (whired - position + size) % size;
+        int wired = backward[shifted];
+        return (wired - position + size) % size;
     }
 
     public void step(int amount) {
