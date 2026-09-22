@@ -10,16 +10,18 @@ public class CharacterCodecTest {
 
     @Test
     public void testCharacterCodecService() {
-        CharacterCodecService characterCodecService = new CharacterCodecService();
+        CharacterCodecService service = new CharacterCodecService();
 
         // Test getting the character codec
-        String characterCodec = characterCodecService.getCharacterCodec();
-        assertNotNull(characterCodec, "Character codec should not be null");
+        String initialCodec = service.getCharacterCodec();
+        assertNotNull(initialCodec, "Initial character codec should not be null");
 
         // Test setting a new character codec
-        String newCharacterCodec = "newCodec";
-        characterCodecService.setCharacterCodec(newCharacterCodec);
-        String updatedCharacterCodec = characterCodecService.getCharacterCodec();
-        assertEquals(newCharacterCodec, updatedCharacterCodec, "Character codec should be updated");
+        String newCodec = "newCharacterCodec";
+        service.setCharacterCodec(newCodec);
+        String updatedCodec = service.getCharacterCodec();
+        assertEquals(newCodec, updatedCodec, "Updated character codec should match the new value");
+
     }
+
 }
