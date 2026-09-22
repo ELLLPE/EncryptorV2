@@ -10,12 +10,13 @@ public class Rotor {
     /**
      * Constructs a Rotor with the specified wiring.
      * 
-     * @param wiring The wiring for the rotor.
+     * @param wiring   The wiring for the rotor.
+     * @param position The initial position of the rotor.
      */
-    public Rotor(int[] wiring) {
+    public Rotor(int[] wiring, int position) {
         this.forward = wiring.clone();
         this.backward = invert(wiring);
-        this.position = 0;
+        this.position = position;
         this.size = wiring.length;
     }
 
