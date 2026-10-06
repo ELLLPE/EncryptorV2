@@ -9,7 +9,7 @@ public class RotorTest {
 
     @Test
     public void testRotorFunctionality() {
-        // Implement your test cases for the Rotor class here
+
     }
 
 }

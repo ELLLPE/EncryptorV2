@@ -4,8 +4,8 @@ public class Rotor {
 
     private final int[] forward; // wiring
     private final int[] backward; // inverse wiring
-    private int position; // current offset
-    private int size; // size of the rotor
+    private int position;
+    private int size;
 
     /**
      * Constructs a Rotor with the specified wiring.
@@ -54,7 +54,7 @@ public class Rotor {
      * @param wiring The original wiring.
      * @return The inverted wiring.
      */
-    private int[] invert(int[] wiring) {
+    public int[] invert(int[] wiring) {
         int[] inverse = new int[wiring.length];
         for (int i = 0; i < wiring.length; i++) {
             inverse[wiring[i]] = i;

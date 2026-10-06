@@ -1,7 +1,5 @@
 package encryptorV2.dataIntegrator.characterCodec;
 
-import java.io.File;
-
 import encryptorV2.dataIntegrator.SaveManager;
 
 class CharacterCodec {
